@@ -1,0 +1,63 @@
+﻿@model ShopTARgv23.Models.Spaceships.SpaceshipDetailsViewModel
+
+<h1>Details</h1>
+<div class="h1">
+    Spaceship
+</div>
+<div>
+    <hr />
+    <dl>
+        <div>
+            <label asp-for="Id" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Id)
+        </div>
+
+        <div>
+            <label asp-for="Name" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Name)
+        </div>
+
+        <div>
+            <label asp-for="Type" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Type)
+        </div>
+
+        <div>
+            <label asp-for="BuiltDate" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.BuiltDate)
+        </div>
+
+        <div>
+            <label asp-for="CargoWeight" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.CargoWeight)
+        </div>
+
+        <div>
+            <label asp-for="Crew" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Crew)
+        </div>
+
+        <div>
+            <label asp-for="EnginePower" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.EnginePower)
+        </div>
+
+        <div>
+            <label asp-for="CreatedAt" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </div>
+
+        <div>
+            <label asp-for="ModifiedAt" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.ModifiedAt)
+        </div>
+
+        @foreach (var images in Model.FileToApiViewModels)
+        {
+            <partial name="_Images" model="images" />
+        }
+
+    </dl>
+
+    <a asp-action="Index" asp-controller="spaceships">Back</a>
+</div>

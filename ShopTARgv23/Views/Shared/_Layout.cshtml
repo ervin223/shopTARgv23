@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShopTARgv23</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ShopTARgv23.styles.css" asp-append-version="true" />-->
+    <!-- Telephasic Template CSS -->
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+</head>
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header Wrapper -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
+                <!-- Navigation -->
+                <nav id="nav">
+                    <ul>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index" class="icon solid fa-home"><span>Home</span></a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Privacy" class="icon solid fa-cog"><span>Privacy</span></a></li>
+                        <li><a asp-area="" asp-controller="Spaceships" asp-action="Index" class="icon solid fa-retweet"><span>Spaceship</span></a></li>
+                        <li><a asp-area="" asp-controller="RealEstate" asp-action="Index" class="icon solid fa-retweet"><span>Real Estate</span></a></li>
+                        <li><a asp-area="" asp-controller="AccuWeather" asp-action="Index"><span>AccuWeather</span></a></li>
+                        <li><a asp-area="" asp-controller="ChuckNorris" asp-action="Index"><span>Chuck Norris Jokes</span></a></li>
+                        <li><a asp-area="" asp-controller="Games" asp-action="Index"><span>Games</span></a></li>
+                        <li><a asp-area="" asp-controller="Coctails" asp-action="Index"><span>Coctails</span></a></li>
+                        <li><a asp-area="" asp-controller="OpenWeatherMap" asp-action="Index"><span>Current Weather</span></a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="wrapper">
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+        <div id="footer-wrapper">
+            <footer id="footer" class="container">
+                <p>&copy; 2024 - ShopTARgv23 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Telephasic Template Scripts -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.dropotron.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

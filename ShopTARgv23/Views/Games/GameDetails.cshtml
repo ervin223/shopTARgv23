@@ -1,0 +1,71 @@
+﻿@model ShopTARgv23.Models.Games.GameViewModel
+
+<div class="container">
+    <div class="h1">Game Details</div>
+    <hr />
+
+    <dl>
+        <div>
+            <label asp-for="id" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.id)
+        </div>
+
+        <div>
+            <label asp-for="title" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.title)
+        </div>
+
+        <div>
+            <label asp-for="game_url" class="col-sm-2"></label>
+            <a href="@Html.DisplayFor(model => model.game_url)" target="_blank">
+                @Html.DisplayFor(model => model.game_url)
+            </a>
+        </div>
+
+        <div>
+            <label asp-for="thumbnail" class="col-sm-2"></label>
+            <a href="@Html.DisplayFor(model => model.thumbnail)" target="_blank">
+                @Html.DisplayFor(model => model.thumbnail)
+            </a>
+        </div>
+
+        <div>
+            <label asp-for="short_description" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.short_description)
+        </div>
+
+        <div>
+            <label asp-for="genre" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.genre)
+        </div>
+
+        <div>
+            <label asp-for="platform" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.platform)</a>
+        </div>
+
+        <div>
+            <label asp-for="publisher" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.publisher)
+        </div>
+
+        <div>
+            <label asp-for="developer" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.developer)
+        </div>
+
+        <div>
+            <label asp-for="release_date" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.release_date)
+        </div>
+
+        <div>
+            <label asp-for="freetogame_profile_url" class="col-sm-2"></label>
+            <a href="@Html.DisplayFor(model => model.freetogame_profile_url)" target="_blank">
+                @Html.DisplayFor(model => model.freetogame_profile_url)
+            </a>
+        </div>
+    </dl>
+
+    <a asp-action="Index" asp-controller="Games">Back</a>
+</div>

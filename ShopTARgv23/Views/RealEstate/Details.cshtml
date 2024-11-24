@@ -1,0 +1,51 @@
+﻿@model ShopTARgv23.Models.RealEstate.RealEstateDetailsViewModel
+
+<h1>Details</h1>
+<div class="h1">
+    Real Estate
+</div>
+<div>
+    <hr />
+    <dl>
+        <div>
+            <label asp-for="Id" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Id)
+        </div>
+
+        <div>
+            <label asp-for="Location" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Location)
+        </div>
+
+        <div>
+            <label asp-for="Size" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Size)
+        </div>
+
+        <div>
+            <label asp-for="RoomNumber" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.RoomNumber)
+        </div>
+
+        <div>
+            <label asp-for="BuildingType" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.BuildingType)
+        </div>
+
+        <div>
+            <label asp-for="CreatedAt" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </div>
+
+        <div>
+            <label asp-for="ModifiedAt" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.ModifiedAt)
+        </div>
+        @foreach (var images in Model.Image)
+        {
+            <partial name="Image" model="images" />
+        }
+    </dl>
+
+    <a asp-action="Index" asp-controller="RealEstate">Back</a>
+</div>

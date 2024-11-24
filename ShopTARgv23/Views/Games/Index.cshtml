@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ShopTARgv23.Models.Games.GamesViewModel>
+
+@{
+    int rowNumber = 1;
+}
+
+<div class="h1">
+    Games List
+</div>
+<hr />
+<form method="post">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nr</th>
+                <th scope="col">Title</th>
+                <th scope="col">Genre</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in Model)
+            {
+                <tr>
+                    <td>@rowNumber</td>
+                    <td>@game.title</td>
+                    <td>@game.genre</td>
+                    <td>
+                        <a asp-action="GameDetails" asp-controller="Games" asp-route-id="@game.id">Details</a>
+                    </td>
+                </tr>
+                rowNumber++;
+            }
+        </tbody>
+    </table>
+</form>

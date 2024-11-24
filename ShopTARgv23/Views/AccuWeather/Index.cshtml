@@ -1,0 +1,23 @@
+﻿@model ShopTARgv23.Models.AccuWeather.AccuWeatherSearchViewModel
+
+<div class="container">
+    <div class="h1">
+        AccuWeather
+    </div>
+
+    <form method="post">
+        <div>
+            <div class="h4">
+                Search the forecast here:
+            </div>
+            <div class="col-sm-10">
+                <label asp-for="CityName"></label>
+                <input asp-for="CityName" class="form-control" />
+                <span asp-validation-for="CityName"></span>
+            </div>
+        </div>
+        <div>
+            <button asp-controller="accuWeather" asp-action="searchCity">Search</button>
+        </div>
+    </form>
+</div>

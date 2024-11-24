@@ -1,0 +1,51 @@
+﻿@model ShopTARgv23.Models.AccuWeather.AccuWeatherViewModel
+
+<div class="container">
+    <div class="h1">
+        AccuWeather
+    </div>
+
+    <div class="h4">
+        Forecast for the selected city
+    </div>
+
+    <hr />
+    <dl>
+        <div>
+            <label asp-for="CityName" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.CityName)
+        </div>
+
+        <div>
+            <label asp-for="EffectiveDate" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.EffectiveDate)
+        </div>
+
+        <div>
+            <label asp-for="Severity" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Severity)
+        </div>
+
+        <div>
+            <label asp-for="Text" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Text)
+        </div>
+
+        <div>
+            <label asp-for="Category" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.Category)
+        </div>
+
+        <div>
+            <label asp-for="TempMinValue" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.TempMinValue) °C
+        </div>
+
+        <div>
+            <label asp-for="TempMaxValue" class="col-sm-2"></label>
+            @Html.DisplayFor(model => model.TempMaxValue) °C
+        </div>
+    </dl>
+
+    <a asp-action="Index" asp-controller="AccuWeather">Back</a>
+</div>
